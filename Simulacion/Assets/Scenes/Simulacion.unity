@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 461126560}
   m_Layer: 5
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,9 +405,9 @@ GameObject:
   - component: {fileID: 593713776}
   - component: {fileID: 593713775}
   - component: {fileID: 593713774}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,7 +579,7 @@ Transform:
   m_GameObject: {fileID: 618543971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -170, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 998032734}
   m_Layer: 0
   m_Name: red (1)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 1591109469}
   m_Layer: 0
   m_Name: red (2)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 1881631043}
   m_Layer: 0
   m_Name: red
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

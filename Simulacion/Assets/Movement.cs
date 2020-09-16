@@ -85,13 +85,34 @@ public class Movement : MonoBehaviour
         a = (carga * campoE) / masa;
 
         //Se coloca la particula en el inicio del campo contrario
-        if (carga > 0) {
-            transform.position = new Vector3(-170, 90, 0);
+        if ((carga > 0 && campoE > 0) || (carga < 0 && campoE < 0)) {
+            if(velocidad>0)
+                transform.position = new Vector3(-170, 90, 0);
+            else
+            {
+                transform.position = new Vector3(170, 90, 0);
+            }
+        } else if (carga < 0 && campoE > 0 || (carga > 0 && campoE < 0)) {
+            if (velocidad>0)
+                transform.position = new Vector3(-170, -90, 0);
+            else
+                transform.position = new Vector3(170, -90, 0);
+        }
+        //Dependiendo de la carga se coloca el color de la particula
+        if (carga > 0)
+        {
             gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-
-        } else if (carga < 0) {
-            transform.position = new Vector3(-170, -90, 0);
+        } else
+        {
             gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
+        }
+        //Dependiendo del campo se voltea la simulacion
+        if (campoE < 0)
+        {
+            for(int i = 0; i < 3; i++)
+                GameObject.FindGameObjectsWithTag("Arrow")[i].transform.Rotate(0, 0, 180);
+            GameObject.FindGameObjectWithTag("Up").GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
+            GameObject.FindGameObjectWithTag("Down").GetComponent<Renderer>().material.SetColor("_Color", Color.red);
         }
         StartCoroutine(simulado());
 
@@ -108,6 +129,7 @@ public class Movement : MonoBehaviour
             float x_normal = (float)(Vx*i)/10;
             float y_normal = ((float)Vy * retardo) - (float)(0.5 * a * (Mathf.Pow(retardo, 2)));
 
+            print(y_normal);
             //Para que se pueda ver completo
             if (Math.Abs(y_normal) >= Math.Pow(10, 5))
             {
@@ -115,10 +137,7 @@ public class Movement : MonoBehaviour
             } else if (Math.Abs(y_normal) > Math.Pow(10, 2))
             {
                 y_normal = (y_normal / (Mathf.Pow(10, 3))) / i;
-            } else
-            {
-                y_normal = (y_normal / i);
-            }
+            } 
 
             pos.x += x_normal;
             pos.y += y_normal;
