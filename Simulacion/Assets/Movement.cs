@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
+    public Text nombreparticula;
+    public Text nposicion;
     private double velocidad;
     private double angulo;
     private double campoE;
@@ -143,7 +146,8 @@ public class Movement : MonoBehaviour
             pos.y += y_normal;
             transform.position = pos;
 
-            print("Particula actual: " + particula + "    Posicion actual (" + x_normal + " , " + y_normal + ")");
+            nombreparticula.text = "Particula: " + particula;
+            nposicion.text = "Posicion actual: " + (int)x_normal + ", " + y_normal;
 
 
             yield return new WaitForSeconds(2);
