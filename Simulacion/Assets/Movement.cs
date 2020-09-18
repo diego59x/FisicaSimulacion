@@ -105,7 +105,7 @@ public class Movement : MonoBehaviour
         if (carga > 0)
         {
             gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-        } else
+        } else if (carga < 0)
         {
             gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
         }
@@ -130,9 +130,10 @@ public class Movement : MonoBehaviour
         {
             float retardo = i * Mathf.Pow(10, -3);
             float x_normal = (float)(Vx*i)/10;
+
             float y_normal = ((float)Vy * retardo) - (float)(0.5 * a * (Mathf.Pow(retardo, 2)));
 
-            print(y_normal);
+            
             //Para que se pueda ver completo
             if (Math.Abs(y_normal) >= Math.Pow(10, 5))
             {
@@ -140,14 +141,15 @@ public class Movement : MonoBehaviour
             } else if (Math.Abs(y_normal) > Math.Pow(10, 2))
             {
                 y_normal = (y_normal / (Mathf.Pow(10, 3))) / i;
-            } 
+            }
+            
 
             pos.x += x_normal;
             pos.y += y_normal;
             transform.position = pos;
 
             nombreparticula.text = "Particula: " + particula;
-            nposicion.text = "Posicion actual: " + (int)x_normal + ", " + y_normal;
+            nposicion.text = "Posicion actual: " + (int)x_normal + ", " + (int)y_normal;
 
 
             yield return new WaitForSeconds(2);

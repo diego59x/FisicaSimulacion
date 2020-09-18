@@ -2698,7 +2698,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Campo E (N/C)
+  m_Text: N/C
 --- !u!222 &5502560856145267797
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2804,7 +2804,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Velocidad  (m/s)
+  m_Text: m/s
 --- !u!1 &5502560856149157619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,7 +3112,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Angulo (Grados)
+  m_Text: grados
 --- !u!1 &5502560856438664237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,7 +3437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tiempo (Segundos)
+  m_Text: seg
 --- !u!222 &5502560856586724203
 CanvasRenderer:
   m_ObjectHideFlags: 0
