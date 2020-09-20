@@ -64,23 +64,26 @@ public class Movement : MonoBehaviour
         }
         else if (particula == "Quark Cima")
         {
-            carga = (2/3)*(1.6 * Mathf.Pow(10, -19));
+            carga = (2*(1.6 * Mathf.Pow(10, -19)))/3;
             masa = 307.5 * Mathf.Pow(10, -27);
+            
         }
         else if (particula == "Quark Extrano")
         {
             masa = 142.61 * Mathf.Pow(10, -30);
-            carga = -(1/3) * (1.6 * Mathf.Pow(10, -19));
+            carga =  (1.6 * Mathf.Pow(10, -19))/(-3);
         }
         else if (particula == "Quark Abajo")
         {
             masa = 7.13 * Mathf.Pow(10, -30);
-            carga = -(1/3) * (1.6 * Mathf.Pow(10, -19));
+            carga = (1.6 * Mathf.Pow(10, -19))/(-3);
+            //print("1" + (1.6 * Mathf.Pow(10, -19)));
+            //print("2" + carga);
         }
         else if (particula == "Quark Fondo")
         {
             masa = 7.13 * Mathf.Pow(10, -27);
-            carga = -(1/3) * (1.6 * Mathf.Pow(10, -19));
+            carga = (1.6 * Mathf.Pow(10, -19))/(-3);
         }
 
         Vx = velocidad * Mathf.Cos((float)rad);
